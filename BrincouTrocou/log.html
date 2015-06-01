@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="NO-CACHE">
+    <link rel="stylesheet" type="text/css" href="style/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/log.css">
+	<script type="text/javascript" charset="utf-8" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/facebookConnectPluginNew.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/log.js"></script>
+  </head>
+  
+  <body onload="checa()">
+    <div class="carregando" id="carregando">
+      <img src="img/carreg.gif" class="carreg">
+    </div>
+    <div id="fb-root">
+    </div>
+    <div class="golazo">
+      <img src="img/face.png" width="220">
+    </div>
+    <div class="entrar3">
+      <a href="javascript:facebook();"  data-ajax="false">
+        <img src="img/conectar_com_facebook.png" >
+      </a>
+      
+    </div>
+    <div class="entrar2">
+      OU
+    </div>
+    <div class="cadastrar">
+      <form  method="get" name="cadastro" id="cadastro">
+        <table width="100%" cellpadding="2" cellspacing="0" border="0" >
+          <tr>
+            <td height="50" valign="top">
+              <input name="email"  type="text" size="20" placeholder="E-mail">
+            </td>
+          </tr>
+          <tr>
+            <td height="45" valign="top" align="left">
+              <input name="senha"  type="password" size="20" placeholder="Senha">
+              <br>
+              <a href="javascript:salvar('esqueci');" style="color:#F79646; text-decoration: none; margin-left:5px;">
+                <i>
+                  Esqueci minha senha
+                </i>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="entrar">
+      <a href="javascript:salvar();" class="button3" data-ajax="false">
+        <span>
+          &nbsp;&nbsp;&nbsp;&nbsp;Entrar&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </a>
+      
+    </div>
+    <div class="entrar5">
+      Ainda não possui conta ?
+    </div>
+    <div class="entrar4">
+      <a href="cadastrar.html" class="button4" data-ajax="false">
+        <span>
+          &nbsp;&nbsp;&nbsp;&nbsp;Crie aqui a sua conta&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </a>
+      
+    </div>
+</body>
+</html>

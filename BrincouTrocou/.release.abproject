@@ -1,5 +1,7 @@
 {
   "CorePlugins": [
+    "cc.fovea.cordova.purchase@3.10.0",
+    "com.phonegap.plugins.facebookconnect@0.11.1",
     "org.apache.cordova.battery-status",
     "org.apache.cordova.camera",
     "org.apache.cordova.contacts",

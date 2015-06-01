@@ -1,0 +1,283 @@
+﻿*{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+.fund {
+
+}
+
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+height: 100%;
+}
+
+
+html { 
+			background: url(imagem.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
+.fundo img {
+position: fixed;
+height: 100%;
+z-index:-1;
+}
+
+
+.golazo a {
+font-size: 0.8em;
+display: inline-block;
+font-family: Arial;
+padding: 12px;
+text-align: center;
+font-weight:10;
+color: #FFF;
+text-decoration: none;
+
+}
+
+.golazo a:hover {
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 0.8em;
+text-decoration: none;
+font-weight:10;
+display: inline-block;
+}
+
+.golazo a:visited {
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 0.8em;
+text-decoration: none;
+font-weight:10;
+display: inline-block;
+}
+
+
+
+.golazo {
+margin: 10px auto;
+position: absolute;
+width: 200px;
+margin-left: -105px;
+left: 50%;
+color: white;
+z-index:10;
+}
+
+.golazo h1{
+color: white;
+display: inline;
+font-size: 40px;
+font-family: Arial;
+}
+.golazo h2{
+color: white;
+display: inline;
+font-size: 50px;
+font-family: Arial;
+}
+.golazo h3{
+color: white;
+display: inline;
+font-size: 60px;
+font-family: Arial;
+}
+.golazo h4{
+color: white;
+display: inline;
+font-size: 70px;
+font-family: Arial;
+}
+.golazo h5{
+color: white;
+display: inline;
+font-size: 80px;
+font-family: Arial;
+}
+.golazo h6{
+color: white;
+display: inline;
+font-size: 100px;
+font-family: Arial;
+}
+
+#slider, #slider2 {
+margin: auto;
+height: 100vh;
+overflow: hidden;
+z-index:10;
+
+}
+
+.slidert {
+background: url("f_golazo.jpg") no-repeat center top; 
+  background-size: 100% 100%;
+z-index:10;
+height: 100vh;
+}
+
+.slider-wrap {
+height: inherit;
+background-color:initial;
+z-index:10;
+}
+.box {
+margin: 230px auto;
+width: 250px;
+height: 120px;
+background-color: #ffffff;
+border-radius: 30px;
+border-color: #92c050;
+border-style: solid;
+padding: 20px;
+color: #000000;
+text-align: center;
+font-family: Calibri;
+font-size: 1em;
+z-index:10;
+}
+
+.box p {
+margin-top: -10px;
+text-align: center;
+color: #629020;
+font-family: Calibri;
+font-size: 1.2em;
+font-weight:bold;
+z-index:10;
+}
+
+
+
+.entrar {
+position: absolute;
+top:450px;
+left: 50%;
+width: 250px;
+height: 50px;
+margin-left: -145px;
+text-align: center;
+
+}
+
+
+.slidert a:hover {
+color: #ffffff;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 2em;
+vertical-align: middle;
+z-index:10;
+}
+
+.slidert nav {
+position: absolute;
+width: 100%;
+top:400px;
+z-index:10;
+}
+.slidert nav ul {
+text-align: center;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.slidert nav ul li {
+display: inline-block;
+width: 10px;
+height: 10px;
+border-radius: 10px;
+background: #ffffff;
+margin: 0 2px;
+cursor: pointer;
+}
+.slidert nav ul li.on {
+background-color: green;
+}
+
+
+
+
+
+.button {
+position: absolute;
+top: -10px;
+left: 50px;
+display: inline-block;
+margin: 0 auto;
+
+-webkit-border-radius: 10px;
+
+-webkit-box-shadow: 
+0px 3px rgba(128,128,128,1), /* gradient effects */
+0px 4px rgba(118,118,118,1),
+0px 5px rgba(108,108,108,1),
+0px 6px rgba(98,98,98,1),
+0px 7px rgba(88,88,88,1),
+0px 8px rgba(78,78,78,1),
+0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+
+-webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.button span {
+background-color: green;
+
+-webkit-box-shadow:
+0px -1px #fff, /* top highlight */
+0px 1px 1px #FFFFFF; /* bottom edge */
+
+-webkit-background-size: 100%, 100%, 100%, 4px 4px;
+
+-webkit-border-radius: 10px;
+-webkit-transition: -webkit-transform .1s ease-in-out;
+
+display: inline-block;
+padding: 10px 40px 10px 40px;
+
+color: #ffffff;
+text-transform: uppercase;
+font-family: Calibri;
+font-size: 2em;
+}
+
+.button span:hover {
+color: #ffff00;
+cursor: pointer;
+font-family: Calibri;
+font-size: 32px;
+}
+
+.button:active {
+-webkit-box-shadow: 
+0px 3px rgba(128,128,128,1),
+0px 4px rgba(118,118,118,1),
+0px 5px rgba(108,108,108,1),
+0px 6px rgba(98,98,98,1),
+0px 7px rgba(88,88,88,1),
+0px 8px rgba(78,78,78,1),
+0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+}
+
+.button:active span{
+-webkit-transform: translate(0, 5px); /* depth of button press */
+}
+
+.button span:after {
+display: block;
+width: 10px;
+height: 10px;
+
+position: absolute;
+right: 14px;
+top: 12px; 
+
+font-family: Calibri;
+font-size: 2em;
+color: #ffffff;
+
+}

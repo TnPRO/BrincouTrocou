@@ -1,0 +1,438 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+/* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
+html, body {overflow-x: hidden;}
+
+body {
+	font: 100% arial, verdana, tahoma, sans-serif;
+	color: #7f7f7f;
+	background-color: #F79646;
+}
+
+header {
+	
+	background: #92c050;
+	padding: 10px;
+	padding-top: 30px;
+	overflow: hidden;
+	width: 100%;
+	position: fixed;
+	
+}
+
+
+
+header h1 {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	width: 80%;
+	font-size: 1.2em;
+	font-family: Arial;
+	margin-left: 10px;
+color: #FFF;
+
+}
+h1 a {color: #FFF; text-decoration: none;}
+
+header ouro {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	top: 23px;
+	left: 100%;
+	margin-left: -130px;	
+	
+}
+
+header msg {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	top: 23px;
+	left: 100%;
+	margin-left: -140px;	
+	
+}
+
+ouro h2 {
+font-size: 0.9em;
+	font-family: Arial;
+vertical-align: middle;
+display: inline-block;
+margin-right: 5px;
+margin-top: 2px;
+width: 60px;
+text-align: right;
+color: #FFF;
+
+}
+
+header prata {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	top: 48px;
+	left: 100%;
+	margin-left: -130px;	
+	
+}
+
+prata h2 {
+font-size: 0.9em;
+width: 60px;
+text-align: right;
+	font-family: Arial;
+vertical-align: middle;
+display: inline-block;
+margin-right: 5px;
+margin-top: 2px;
+color: #FFF;
+}
+
+
+
+.main {
+	top: 70px;
+	
+	width: 100%;
+	
+	
+	position: absolute;
+	z-index: -10;
+	background-color: #F79646;
+	
+		
+}
+.main p {
+	font-size: .9em;
+	line-height: 1.2em;
+	margin-bottom: 20px;
+	font-family: Arial;
+	
+}
+
+.menu-anchor {
+	width: 40px;
+	height: 32px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+	background: #FFF;
+}
+
+.menu-anchor:before {
+	content: "";
+	display: block;
+	margin: 7px auto;
+	width: 70%;
+	height: 0.25em;
+	background: #92c050;
+	box-shadow: 0 .45em 0 0 #92c050, 0 .9em 0 0 #92c050;
+}
+
+.menu-active .menu-anchor {background: #7f7f7f}
+
+menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 220px;
+	height: 100%;
+	padding-top: 30px;
+	background: #ffffff;
+	overflow: auto;
+	box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.3)
+}
+
+menu li a {
+	display: block;
+	border-bottom: 1px solid rgba(127,127,127,.3);
+	margin: 0 10px;
+	padding: 10px;
+	color: #7f7f7f;
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 1.1em;
+}
+
+menu li a:hover {
+	background: #FFF;
+	color: #7f7f7f;
+	font-family: Arial;
+	font-size: 1.1em;
+}
+
+/*
+	Aqui você esconde o menu para fora da tela 
+	O valor é exatamente a largura da sidebar
+*/
+menu {
+	-webkit-transform: translateX(-220px);
+	-moz-transform: translateX(-220px);
+	-ms-transform: translateX(-220px);
+	transform: translateX(-220px);
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+/*
+	Essa é a posição original do HEADER e do MAIN
+*/
+header, .main, barra {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+/*
+   Com a classe menu-active na tag HTML
+*/
+.menu-active menu {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.menu-active header,
+.menu-active barra, 
+.menu-active .main {
+	-webkit-transform: translateX(220px);
+	-moz-transform: translateX(220px);
+	-ms-transform: translateX(220px);
+	transform: translateX(220px);
+}
+
+barra {
+display: inline-block;
+text-align: center;
+	width: 100%;
+margin: 0px;
+top: 70px;
+background-color: #F79646;
+	position: absolute;
+z-index: -2;
+}
+
+barra h1 {
+font-size: 1.3em;
+display: inline-block;
+font-family: Arial;
+color: #ffff00;
+padding: 12px;
+text-align: center;
+
+
+
+}
+
+
+
+
+barra a {
+font-size: 1.3em;
+display: inline-block;
+font-family: Arial;
+padding: 12px;
+text-align: center;
+color: #FFF;
+text-decoration: none;
+
+}
+
+barra a:hover {
+	color: #ffff00;
+	font-family: Arial;
+	font-size: 1.3em;
+text-decoration: none;
+display: inline-block;
+}
+
+
+
+
+
+lista {
+display: inline-block;
+text-align: center;
+align: center;
+top: 20px;
+width: 100%;
+margin: 0px;
+background-color: #F79646;
+	position: absolute;
+padding: 5px;
+}
+
+
+
+.rank {
+margin: 0 auto;
+margin-top: 10px;
+
+text-align: center;
+width: 280px;
+border-radius: 10px;
+background-color: #000000;
+padding: 2px;
+background-color: white;
+border: solid thin;
+margin-bottom: 5px;
+}
+
+.carregando {
+display: none;
+width: 100%;
+	height: 100%;
+position: fixed;
+vertical-align:middle;
+text-align: center;
+
+}
+
+
+.carreg{
+
+margin-top: 60px;
+
+}
+
+.nom {
+clear: both;
+font-family: Arial;
+color: #808080;
+padding: 5px;
+margin-top: 5px;
+margin-left: 8px;
+text-align: center;
+margin-bottom: 5px;
+width: 250px;
+border: solid thin;
+}
+
+
+.nom valor {
+font-size: 18px;
+
+display: inline-block;
+font-family: Arial;
+color: #808080;
+padding-bottom: 10px;
+text-align: center;
+
+width: 260px;
+
+
+}
+
+
+
+
+
+.entrar {
+position: relative;
+margin-left: -125px;
+left: 50%;
+width: 250px;
+height: 50px;
+
+text-align: center;
+
+}
+
+.button {
+position: relative;
+
+display: inline-block;
+margin: 0 auto;
+
+-webkit-border-radius: 10px;
+
+-webkit-box-shadow: 
+0px 3px rgba(128,128,128,1), /* gradient effects */
+0px 4px rgba(118,118,118,1),
+0px 5px rgba(108,108,108,1),
+0px 6px rgba(98,98,98,1),
+0px 7px rgba(88,88,88,1),
+0px 8px rgba(78,78,78,1),
+0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+
+-webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.button span {
+background-color: green;
+
+-webkit-box-shadow:
+0px -1px #fff, /* top highlight */
+0px 1px 1px #FFFFFF; /* bottom edge */
+
+-webkit-background-size: 100%, 100%, 100%, 4px 4px;
+
+-webkit-border-radius: 10px;
+-webkit-transition: -webkit-transform .1s ease-in-out;
+
+display: inline-block;
+padding: 10px 40px 10px 40px;
+
+color: #ffffff;
+text-transform: uppercase;
+font-family: Calibri;
+font-size: 1.2em;
+}
+
+.button span:hover {
+color: #ffff00;
+cursor: pointer;
+font-family: Calibri;
+font-size: 1.2em;
+}
+
+.button:active {
+-webkit-box-shadow: 
+0px 3px rgba(128,128,128,1),
+0px 4px rgba(118,118,118,1),
+0px 5px rgba(108,108,108,1),
+0px 6px rgba(98,98,98,1),
+0px 7px rgba(88,88,88,1),
+0px 8px rgba(78,78,78,1),
+0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+}
+
+.button:active span{
+-webkit-transform: translate(0, 5px); /* depth of button press */
+}
+
+.button span:after {
+display: block;
+width: 10px;
+height: 10px;
+
+position: absolute;
+right: 14px;
+top: 12px; 
+
+font-family: Calibri;
+font-size: 1.2em;
+color: #ffffff;
+
+}

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <title>
+    Meus Dados
+  </title>
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/styleeb.css">
+  <link rel="stylesheet" type="text/css" href="css/dados.css">
+  <script type="text/javascript" charset="utf-8" src="js/facebookConnectPlugin.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src='scripts/remember_scroll.js'></script>
+  <script type="text/javascript" src="jquery.ebcaptcha.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/dados.js"></script>
+  
+</head>
+
+<body onload="saldo()">
+  
+  <header >
+	<span class="menu-anchor">
+    </span>
+    
+    <h1>
+      Meus Dados
+    </h1>
+    
+    <msg id="msg">
+    </msg>
+    <ouro>
+      <h2 id="ouro">
+      </h2>
+      <img src="img/ouro.png" height="20" style="vertical-align:middle">
+    </ouro>
+    <prata>
+      <h2 id="img/prata">
+      </h2>
+      <img src="img/prata.png" height="20" style="vertical-align:middle">
+    </prata>
+  </header>
+  <menu>
+	<ul>
+      <li>
+        <a href="trocar.html">
+          Trocar Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="inserir.html">
+          Inserir Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="moedas.html">
+          Moedas
+        </a>
+      </li>
+      <li>
+        <a href="meus_brinq.html">
+          Meus Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="minhas_trocas.html">
+          Minhas Trocas
+        </a>
+      </li>
+      <li>
+        <a href="regulamento.html">
+          Como Funciona
+        </a>
+      </li>
+      <li>
+        <a href="dados.html">
+          Meus Dados
+        </a>
+      </li>
+      <li>
+        <a href="novidade.html">
+          Novidades
+        </a>
+      </li>
+      <li>
+        <a href="faleconosco.html">
+          Fale Conosco
+        </a>
+      </li>
+      <li>
+        <a href="javascript:share_me();">
+          <img src="img/compartilhar.jpg" border="0" width="150">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:sair();">
+          Sair
+        </a>
+      </li>
+	</ul>
+  </menu>
+  <div class="carregando" id="carregando">
+    <img src="carreg.gif" class="carreg">
+  </div>
+  <div id="fb-root">
+  </div>
+  
+  <section class="main" >
+	
+    <lista>
+      <rank>
+        <nom>
+          <form class="signup" method="get" name="dados" id="formu"  >
+			
+            <table width="100%" cellpadding="3" cellspacing="10" >
+              <tr>
+                <td colspan=2 align="left">
+                  <font style="font-family : Arial; font-size   : 16px; color:green;" >
+                    <b>
+                      Dados Pessoais
+                    </b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td colspan=2 align="left">
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td align=left >
+                  <input name="name" class="txt" type="text"  style="width:260px" placeholder="Nome">
+                </td>
+              </tr>
+              <tr>
+                <td align=left >
+                  <input name="nasc" class="txt" type="text" style="width:155px" placeholder="Nasc (dd/mm/aaaa)">
+                  
+                </td>
+              </tr>
+              <tr>
+                <td colspan=2 align="left">
+                  <font style="font-family : Arial; font-size   : 16px; color:green;" >
+                    <br>
+                    <br>
+                    <b>
+                      Endereço
+                    </b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td colspan=2 align="left">
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td align=left >
+                  <input name="cep" class="txt" type="text" style="width:130px" placeholder="CEP(12345-678)">
+                  &nbsp;&nbsp; 
+                  <a href="http://www.buscacep.correios.com.br/servicos/dnec/menuAction.do?Metodo=menuLogradouro" target="_" style="font-family : Arial; font-size   : 12px; color:green;">
+                    <b>
+                      não sabe seu CEP?
+                    </b>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td align=left >
+                  <input name="endereco" class="txt" type="text" style="width:170px" placeholder="Endereço">
+                  
+                  <input name="numero" class="txt" type="text" style="width:80px" placeholder="Número">
+                </td>
+              </tr>
+              <tr>
+                <td align=left >
+                  <input name="complemento" class="txt" type="text" style="width:110px" placeholder="Complemento">
+                  
+                  <input name="bairro" class="txt" type="text" style="width:140px" placeholder="Bairro">
+                </td>
+              </tr>
+              <tr>
+                <td align=left >
+                  <input name="cidade" class="txt" type="text" style="width:170px" placeholder="Cidade">
+                  
+                  <input name="uf" class="txt" type="text" style="width:80px" placeholder="UF">
+                </td>
+              </tr>
+              <tr>
+                <td align=center >
+                  <input  type="button" Value="Salvar Dados" style="width:170px;" onclick="valida();">
+                  
+                </td>
+              </tr>
+              
+            </table>
+          </form>
+          
+        </nom>
+      </rank>
+      
+    </lista>
+    
+	
+  </section>
+  
+  
+  <script>
+    $(document).ready(function(){
+      $('.menu-anchor').on('click touchstart', function(e){
+		$('html').toggleClass('menu-active');
+	  	e.preventDefault();
+        
+      });
+      
+      
+    })
+      //@ sourceURL=pen.js
+  </script>
+  
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content = "-1" />
+   <title>Fale Conosco</title>
+  <link rel="stylesheet" type="text/css" href="css/styleeb.css">
+  <link rel="stylesheet" type="text/css" href="css/faleconosco.css">
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/facebookConnectPlugin.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/remember_scroll.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/faleconosco.js"></script>
+  
+</head>
+
+<body onload="saldo();">
+  
+  <header >
+	<span class="menu-anchor">
+    </span>
+    
+    <h1>
+      Fale Conosco
+    </h1>
+    
+    <msg id="msg">
+    </msg>
+    <ouro>
+      <h2 id="ouro">
+      </h2>
+      <img src="img/ouro.png" height="20" style="vertical-align:middle">
+    </ouro>
+    <prata>
+      <h2 id="prata">
+      </h2>
+      <img src="img/prata.png" height="20" style="vertical-align:middle">
+    </prata>
+  </header>
+  <menu>
+	<ul>
+      <li>
+        <a href="trocar.html">
+          Trocar Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="inserir.html">
+          Inserir Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="moedas.html">
+          Moedas
+        </a>
+      </li>
+      <li>
+        <a href="meus_brinq.html">
+          Meus Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="minhas_trocas.html">
+          Minhas Trocas
+        </a>
+      </li>
+      <li>
+        <a href="regulamento.html">
+          Como Funciona
+        </a>
+      </li>
+      <li>
+        <a href="dados.html">
+          Meus Dados
+        </a>
+      </li>
+      <li>
+        <a href="novidade.html">
+          Novidades
+        </a>
+      </li>
+      <li>
+        <a href="faleconosco.html">
+          Fale Conosco
+        </a>
+      </li>
+      <li>
+        <a href="javascript:share_me();">
+          <img src="img/compartilhar.jpg" border="0" width="150">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:sair();">
+          Sair
+        </a>
+      </li>
+	</ul>
+  </menu>
+  <div class="carregando" id="carregando">
+    <img src="carreg.gif" class="carreg">
+  </div>
+  <div id="fb-root">
+  </div>
+  
+  <section class="main" >
+	
+    <lista>
+      <rank>
+        <nom>
+          <div id="captcha">
+			<form class="signup" method="get" name="mail" id="formu"  >
+              
+              <table width="100%" cellpadding="3" cellspacing="10" >
+				<tr>
+                  <td colspan=2 align="left">
+                    <font >
+                      <b>
+                        Comentários, dúvidas e sugestões
+                      </b>
+                    </font>
+                  </td>
+                </tr>
+				<tr>
+                  <td colspan=2 align="left">
+                    <hr width="90%">
+                  </td>
+                </tr>
+				<tr>
+                  <td align=right width="40%">
+                    Nome:
+                  </td>
+                  <td align="left" width="70%">
+                    <input name="name" class="txt" type="text" size="19">
+                  </td>
+                </tr>
+				<tr>
+                  <td align=right>
+                    Email:
+                  </td>
+                  <td>
+                    <input name="email" class="txt" type="text" size="19">
+                  </td>
+                </tr>
+				<tr>
+                  <td align=right valign=top>
+                    Mensagem:
+                  </td>
+                  <td>
+                    <textarea name="message" cols="21" rows="6" class="txt">
+                    </textarea>
+                  </td>
+                </tr>
+				
+				<tr>
+                  <td align=right>
+                  </td>
+                  <td align="left">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="Enviar Mensagem" class="botao" size="20" onclick="verificamail();">
+                  </td>
+                </tr>
+				
+              </table>
+            </form>
+          </div>
+        </nom>
+      </rank>
+      
+    </lista>
+    
+	
+  </section>
+  
+  
+  <script>
+    $(document).ready(function(){
+      $('.menu-anchor').on('click touchstart', function(e){
+		$('html').toggleClass('menu-active');
+	  	e.preventDefault();
+        
+      }
+                          );
+      
+      
+    }
+                     )
+      //@ sourceURL=pen.js
+  </script>
+  
+  <script type="text/javascript">
+    
+    $(function(){
+      $('#formu').ebcaptcha();
+    }
+     );
+    
+  </script>
+  
+  
+</body>
+
+</html>

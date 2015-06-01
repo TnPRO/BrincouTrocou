@@ -1,0 +1,158 @@
+﻿
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content = "-1" />
+    <title>
+      Minhas Trocas
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/minhas_trocas.css">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/facebookConnectPlugin.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/minhas_trocas.js"></script>
+    <script src='scripts/remember_scroll.js'></script>
+    
+    
+  </head>
+  
+  <body onload="saldo()">
+    
+    <header >
+      <span class="menu-anchor">
+      </span>
+      
+      <h1>
+        Minhas Trocas
+      </h1>
+      
+      <msg id="msg">
+      </msg>
+      <ouro>
+        <h2 id="ouro">
+        </h2>
+        <img src="img/ouro.png" height="20" style="vertical-align:middle">
+      </ouro>
+      <prata>
+        <h2 id="prata">
+        </h2>
+        <img src="img/prata.png" height="20" style="vertical-align:middle">
+      </prata>
+    </header>
+    <menu>
+      <ul>
+		<li>
+          <a href="trocar.html">
+            Trocar Brinquedos
+          </a>
+      </li>
+      <li>
+        <a href="inserir.html">
+          Inserir Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="moedas.html">
+          Moedas
+        </a>
+      </li>
+      <li>
+        <a href="meus_brinq.html">
+          Meus Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="minhas_trocas.html">
+          Minhas Trocas
+        </a>
+      </li>
+      <li>
+        <a href="regulamento.html">
+          Como Funciona
+        </a>
+      </li>
+      <li>
+        <a href="dados.html">
+          Meus Dados
+        </a>
+      </li>
+      <li>
+        <a href="novidade.html">
+          Novidades
+        </a>
+      </li>
+      <li>
+        <a href="faleconosco.html">
+          Fale Conosco
+        </a>
+      </li>
+      <li>
+        <a href="javascript:share_me();">
+          <img src="img/compartilhar.jpg" border="0" width="150">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:sair();">
+          Sair
+        </a>
+      </li>
+  </ul>
+  </menu>
+  <div class="carregando" id="carregando">
+    <img src="img/carreg.gif" class="carreg">
+  </div>
+  <div id="fb-root">
+  </div>
+  
+  
+  <barra>
+    <form name="menu">
+      
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" class="tabela"  >
+        <tr >
+          <td align="center" width="33%">
+            <select name="troca" onchange="trocando(this.value)">
+              <option value="0">
+                Recebendo
+              </option>
+              <option value="1">
+                Enviando
+              </option>
+            </select>
+            
+          </table>
+        
+      </form>
+      
+	</barra>
+  
+  <section class="main" >
+    
+	
+  <lista id="lista">
+    
+    
+  </lista>
+  
+  
+  </section>
+  
+  
+  <script>
+    $(document).ready(function(){
+      $('.menu-anchor').on('click touchstart', function(e){
+		$('html').toggleClass('menu-active');
+      e.preventDefault();
+      
+	  });
+    })
+      //@ sourceURL=pen.js
+  </script>
+  
+  </body>
+  
+  </html>

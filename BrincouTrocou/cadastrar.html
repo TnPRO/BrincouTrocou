@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Cadastrar</title>
+    <meta name="viewport" content="NO-CACHE">
+    <link rel="stylesheet" type="text/css" href="style/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastrar.css">
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cadastrar.js"></script>
+  </head>
+  
+  <body >
+    <div class="img/carregando" id="carregando">
+      <img src="img/carreg.gif" class="carreg">
+    </div>
+    <div id="fb-root">
+    </div>
+    <div class="golazo">
+      <img src="img/face.png" width="220">
+    </div>
+    
+    <div class="cadastrar2">
+      <form  method="get" name="cadastro" id="cadastro">
+        <table width="100%" cellpadding="2" cellspacing="0" border="0" >
+          <tr>
+            <td height="50" valign="top">
+              <input name="name"  type="text" size="20" placeholder="Nome do Usuário (Apelido)">
+            </td>
+          </tr>
+          <tr>
+            <td height="50" valign="top">
+              <input name="email"  type="text" size="20" placeholder="E-mail">
+            </td>
+          </tr>
+          <tr>
+            <td height="50" valign="top">
+              <input name="nascimento"  type="text" size="20" placeholder="Dt Nasc. DD/MM/AAAA">
+            </td>
+          </tr>
+          <tr>
+            <td height="45" valign="top" align="left">
+              <input  type="password" name="senha"  size="20" placeholder="Senha">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="entrar">
+      <a href="javascript:salvar();" class="button" data-ajax="false">
+        <span>
+          Cadastrar
+        </span>
+      </a>
+      
+    </div>
+</body>
+</html>

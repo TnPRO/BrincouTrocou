@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content = "-1" />
+  <title>
+    Moedas
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/moedas.css" />
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/remember_scroll.js"></script>
+  <script type="text/javascript" src="js/inappbilling.js"></script>
+  <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
+  <script type="text/javascript" src="js/moedas.js"></script>
+  
+  </head>
+  
+  <body onload="saldo();">
+    
+    <header >
+      <span class="menu-anchor">
+      </span>
+      
+      <h1>
+        Moedas
+      </h1>
+      
+      <msg id="msg">
+      </msg>
+      <ouro>
+        <h2 id="ouro">
+        </h2>
+        <img src="img/ouro.png" height="20" style="vertical-align:middle">
+      </ouro>
+      <prata>
+        <h2 id="prata">
+        </h2>
+        <img src="img/prata.png" height="20" style="vertical-align:middle">
+      </prata>
+    </header>
+    <menu>
+      <ul>
+		<li>
+          <a href="trocar.html">
+            Trocar Brinquedos
+          </a>
+         </li>
+         <li>
+           <a href="inserir.html">
+             Inserir Brinquedos
+           </a>
+         </li>
+         <li>
+           <a href="moedas.html">
+             Moedas
+           </a>
+         </li>
+         <li>
+           <a href="meus_brinq.html">
+             Meus Brinquedos
+           </a>
+         </li>
+         <li>
+           <a href="minhas_trocas.html">
+             Minhas Trocas
+           </a>
+         </li>
+         <li>
+           <a href="regulamento.html">
+             Como Funciona
+           </a>
+         </li>
+         <li>
+           <a href="dados.html">
+             Meus Dados
+           </a>
+         </li>
+         <li>
+           <a href="novidade.html">
+             Novidades
+           </a>
+         </li>
+         <li>
+           <a href="faleconosco.html">
+             Fale Conosco
+           </a>
+         </li>
+         <li>
+           <a href="javascript:share_me();">
+             <img src="img/compartilhar.jpg" border="0" width="150">
+           </a>
+         </li>
+         <li>
+           <a href="javascript:sair();">
+             Sair
+           </a>
+         </li>
+      </ul>
+  </menu>
+  <div class="carregando" id="carregando">
+    <img src="img/carreg.gif" class="carreg">
+  </div>
+  <div id="fb-root">
+  </div>
+  
+  <section class="main" >
+	
+      <div class="lista">
+        <div class="rank">
+          <font size="+2">
+            Adquirir
+          </font>
+          <div class="nom">
+            <valor>
+              <img src="img/prata.png" height="20" style="vertical-align:middle">
+              50 &nbsp; 
+              <img src="img/setalado.jpg" height="15" style="vertical-align:middle">
+              &nbsp; 
+              <font color="green">
+                R$ 50,00
+              </font>
+            </valor>
+            <div class="entrar">
+              <a href="#" onclick="IAP.buy('io.brincoutrocou.prata')" class="button" data-ajax="false">
+                <span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comprar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              </a>
+              
+            </div>
+          </div>
+          <div class="nom">
+            <valor>
+              <img src="img/ouro.png" height="20" style="vertical-align:middle">
+              3 &nbsp; 
+              <img src="img/setalado.jpg" height="15" style="vertical-align:middle">
+              &nbsp; 
+              <font color="green">
+                R$ 10,00
+              </font>
+            </valor>
+            <div class="entrar">
+              <a href="#" onclick="IAP.buy('io.brincoutrocou.ouro')" class="button" data-ajax="false">
+                <span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comprar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+  </section>
+  
+  <script>
+    $(document).ready(function(){
+      $('.menu-anchor').on('click touchstart', function(e){
+		$('html').toggleClass('menu-active');
+      e.preventDefault();
+      
+	});
+      
+    })
+      //@ sourceURL=pen.js
+  </script>
+  
+  </body>
+  
+</html>

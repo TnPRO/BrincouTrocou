@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content = "-1" />
+    <title>Trocar Brinquedo</title>
+    <link rel="stylesheet" type="text/css" href="css/trocar.css">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/facebookConnectPlugin.js"></script>
+    <script src="scripts/remember_scroll.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/trocar.js"></script>
+  
+  </head>
+  
+  <body onload="saldo()">
+    
+    <header >
+      <span class="menu-anchor">
+      </span>
+      
+      <h1>
+        Trocar Brinquedo
+      </h1>
+      
+      <msg id="msg">
+      </msg>
+      <ouro>
+        <h2 id="ouro">
+        </h2>
+        <img src="img/ouro.png" height="20" style="vertical-align:middle">
+      </ouro>
+      <prata>
+        <h2 id="prata">
+        </h2>
+        <img src="img/prata.png" height="20" style="vertical-align:middle">
+      </prata>
+    </header>
+    <menu>
+      <ul>
+		<li>
+          <a href="trocar.html">
+            Trocar Brinquedos
+          </a>
+      </li>
+      <li>
+        <a href="inserir.html">
+          Inserir Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="moedas.html">
+          Moedas
+        </a>
+      </li>
+      <li>
+        <a href="meus_brinq.html">
+          Meus Brinquedos
+        </a>
+      </li>
+      <li>
+        <a href="minhas_trocas.html">
+          Minhas Trocas
+        </a>
+      </li>
+      <li>
+        <a href="regulamento.html">
+          Como Funciona
+        </a>
+      </li>
+      <li>
+        <a href="dados.html">
+          Meus Dados
+        </a>
+      </li>
+      <li>
+        <a href="novidade.html">
+          Novidades
+        </a>
+      </li>
+      <li>
+        <a href="faleconosco.html">
+          Fale Conosco
+        </a>
+      </li>
+      <li>
+        <a href="javascript:share_me();">
+          <img src="img/compartilhar.jpg" border="0" width="150">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:sair();">
+          Sair
+        </a>
+      </li>
+  </ul>
+  </menu>
+  <div class="carregando" id="carregando">
+    <img src="img/carreg.gif" class="carreg">
+  </div>
+  <div id="fb-root">
+  </div>
+  <div id="pagina">
+    0
+  </div>
+  <div id="inicio">
+    fim
+  </div>
+  
+  
+  <barra id="barra">
+    <form name="menu">
+      
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" class="tabela"  >
+        <tr >
+          <td align="center" width="33%">
+		  
+		    <select name="tipo" onchange="mudamenu()" style="width:123px;">
+			
+				<option value='0'>Tipo de Brinquedo</option>
+				<option value='0'>Todos</option>
+				<option value='Andadores'>Andadores</option>
+                <option value='Atividades do Lar'>Atividades do Lar</option>
+                <option value='Banho'>Banho/Piscina</option>
+                <option value='Bonecas'>Bonecas</option>
+                <option value='Bonecos'>Bonecos</option>
+                <option value='Carrinhos'>Carrinhos</option>
+                <option value='Casinha de Boneca'>Casinha de Boneca</option>
+                <option value='Esportes'>Esportes</option>
+                <option value='Fantasia'>Fantasia</option>
+                <option value='Jogos'>Jogos</option>
+                <option value='Lego'>Lego</option>
+                <option value='Livros'>Livros</option>
+                <option value='Musicais'>Musicais</option>
+                <option value='Para montar'>Para montar</option>
+                <option value='Quebra-cabeça'>Quebra-cabeça</option>
+                <option value='Outros'>Outros</option>
+				
+		    </select>
+				
+			<select name="faixa" onchange="mudamenu()" style="width:108px;">
+			
+				<option value="0">Faixa Etária</option>
+				<option value='0'>Todas</option>
+				<option value="1">Até 1 Ano</option>
+				<option value="2">Entre 1 e 2 Anos</option>
+				<option value="3">Entre 2 e 3 Anos</option>
+				<option value="4">Entre 3 e 4 Anos</option>
+				<option value="5">Entre 4 e 5 Anos</option>
+				<option value="6">Entre 5 e 6 Anos</option>
+				<option value="7">Maior que 6 Anos</option>
+				
+			</select>
+				
+			<select name="uf" onchange="mudamenu()" style="width:49px;">
+			
+                <option value='0'>UF</option>
+                <option value='0'>Todos</option>
+                <option value='AC'>AC</option>
+                <option value='AL'>AL</option>
+                <option value='AP'>AP</option>
+                <option value='AM'>AM</option>
+                <option value='BA'>BA</option>
+                <option value='CE'>CE</option>
+                <option value='DF'>DF</option>
+                <option value='ES'>ES</option>
+                <option value='GO'>GO</option>
+                <option value='MA'>MA</option>
+                <option value='MT'>MT</option>
+                <option value='MS'>MS</option>
+                <option value='MG'>MG</option>
+                <option value='PR'>PR</option>
+                <option value='PB'>PB</option>
+                <option value='PA'>PA</option>
+                <option value='PE'>PE</option>
+                <option value='PI'>PI</option>
+                <option value='RJ'>RJ</option>
+                <option value='RN'>RN</option>
+                <option value='RS'>RS</option>
+                <option value='RO'>RO</option>
+                <option value='RR'>RR</option>
+                <option value='SC'>SC</option>
+                <option value='SE'>SE</option>
+                <option value='SP'>SP</option>
+                <option value='TO'>TO</option>
+                
+			</select>
+			
+          </td>
+        </tr>
+        
+        
+      </table>
+      
+    </form>
+    
+  </barra>
+  
+  
+  
+  <section class="main" >
+	
+  <lista id="lista">
+    
+    
+  </lista>
+  
+  
+  </section>
+
+  
+  
+  <script>
+    
+    function myimage(id,sr) {
+      
+      
+      document.getElementById("imagem"+ id).src = sr;
+    }
+    
+    $(document).ready(function(){
+      $('.menu-anchor').on('click touchstart', function(e){
+		$('html').toggleClass('menu-active');
+      e.preventDefault();
+      
+	});
+      
+      
+    })
+      //@ sourceURL=pen.js
+  </script>
+  
+  </body>
+  
+</html>

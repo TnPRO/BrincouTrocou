@@ -1,0 +1,22 @@
+.carregando {
+display: none;
+width: 100%;
+	height: 100%;
+position: fixed;
+vertical-align:middle;
+text-align: center;
+
+}
+
+
+.carreg{
+
+margin-top: 60px;
+
+}
+
+.esqueci a{
+
+color: white;
+
+}
